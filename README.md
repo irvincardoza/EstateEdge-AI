@@ -2,7 +2,7 @@
 
 ### 🚀 About the Project
 
-We built **SmartProp AI** — a web-based real estate advisor that simplifies property investment and price estimation using the power of AI. 
+We built **EstateEdge AI** — a web-based real estate advisor that simplifies property investment and price estimation using the power of AI.
 
 The inspiration came from a simple question:  
 *“What if anyone could get personalized real estate advice and price insights instantly, without needing an agent?”*
