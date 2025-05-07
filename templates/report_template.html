@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Investment Report</title>
+
+  <!-- Bootstrap CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      color: white;
+      padding: 2rem;
+    }
+    .glass-card {
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 15px;
+      box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+      backdrop-filter: blur(9px);
+      -webkit-backdrop-filter: blur(9px);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      padding: 2rem;
+      margin-bottom: 2rem;
+      animation: fadeInUp 1s ease-in-out;
+    }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    h1 {
+      font-weight: 800;
+      color: #00ffff;
+      text-shadow: 0 0 10px #00ffff80;
+      margin-bottom: 2rem;
+    }
+    h2 {
+      color: #72e3e3;
+      font-weight: 600;
+      border-bottom: 2px solid #00ffff50;
+      padding-bottom: 0.5rem;
+      margin-bottom: 1rem;
+    }
+    .section-content p, .section-content li {
+      font-size: 1.1rem;
+      line-height: 1.8;
+    }
+    .btn-custom {
+      background: #00ffff;
+      color: #000;
+      border-radius: 50px;
+      padding: 0.75rem 2rem;
+      font-weight: bold;
+      box-shadow: 0 0 15px #00ffff80;
+      transition: 0.3s;
+    }
+    .btn-custom:hover {
+      background: #0fffc3;
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1 class="text-center">🚀 Your AI-Generated Investment Report</h1>
+
+    <div class="glass-card">
+      <h2>📄 Investor Profile</h2>
+      <div class="section-content">
+        <p>{{ profile }}</p>
+      </div>
+    </div>
+
+    <div class="glass-card">
+      <h2>💡 Recommended Strategies</h2>
+      <div class="section-content">
+        {{ strategy | safe }}
+      </div>
+    </div>
+
+    <div class="glass-card">
+      <h2>📈 ROI Simulation Insights</h2>
+      <div class="section-content">
+        {{ roi | safe }}
+      </div>
+    </div>
+
+    <div class="text-center mt-5">
+      <a href="/" class="btn btn-custom">🔁 Start Over</a>
+    </div>
+  </div>
+</body>
+</html>
